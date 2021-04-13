@@ -22,11 +22,11 @@ urlpatterns = [
     path('usuario/', UsuarioLista.as_view()),
     path('usuario/<int:pk>/', UsuarioDetalle.as_view()),
     path('usuarios_poblacion/', UsuarioPoblacionLista.as_view()),
-    path('usuario_poblacion/', UsuarioPoblacionDetalle.as_view()),
+    path('usuario_poblacion/<int:pk>', UsuarioPoblacionDetalle.as_view()),
     path('puestos_vacunacion/', PuestoVacunacionLista.as_view()),
-    path('puesto_vacunacion/', PuestoVacunacionDetalle.as_view()),
+    path('puesto_vacunacion/<int:pk>', PuestoVacunacionDetalle.as_view()),
     path('responsables_vacuna/', ResponsableVacunaLista.as_view()),
-    path('responsable_vacuna/', ResponsableVacunaDetalle.as_view()),
-    path('responsables_vacuna/', CompuestoVacunaLista.as_view()),
-    path('responsable_vacuna/', CompuestoVacunaDetalle.as_view())
+    path('responsable_vacuna/<int:pk>', ResponsableVacunaDetalle.as_view()),
+    path('compuestos_vacuna/', CompuestoVacunaLista.as_view()),
+    path('compuesto_vacuna/<int:pk>/', CompuestoVacunaDetalle.as_view())
 ]
