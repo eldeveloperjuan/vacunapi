@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from service.views import UsuarioPoblacionLista, UsuarioPoblacionDetalle, PuestoVacunacionLista, PuestoVacunacionDetalle, ResponsableVacunaLista, ResponsableVacunaDetalle,  CompuestoVacunaLista, CompuestoVacunaDetalle, UsuarioLista, UsuarioDetalle
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('usuario/', UsuarioLista.as_view()),
+    path('usuario/<int:pk>/', UsuarioDetalle.as_view()),
+    path('usuarios_poblacion/', UsuarioPoblacionLista.as_view()),
+    path('usuario_poblacion/', UsuarioPoblacionDetalle.as_view()),
+    path('puestos_vacunacion/', PuestoVacunacionLista.as_view()),
+    path('puesto_vacunacion/', PuestoVacunacionDetalle.as_view()),
+    path('responsables_vacuna/', ResponsableVacunaLista.as_view()),
+    path('responsable_vacuna/', ResponsableVacunaDetalle.as_view()),
+    path('responsables_vacuna/', CompuestoVacunaLista.as_view()),
+    path('responsable_vacuna/', CompuestoVacunaDetalle.as_view())
 ]
