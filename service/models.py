@@ -19,12 +19,12 @@ DOSIS = (
 
 
 class PuestoVacunacion(models.Model):
-    nombre = models.CharField(max_length=30)
-    direccion = models.CharField(max_length=30)
+    nombre = models.CharField(max_length=40)
+    direccion = models.CharField(max_length=100)
     nombre_ips = models.CharField(max_length=50)
-    telefono_1 = models.CharField(max_length=30)
+    telefono_1 = models.CharField(max_length=30, default= '')
     telefono_2 = models.CharField(max_length=30)
-    horario_de_atencion = models.CharField(max_length=30)
+    horario_de_atencion = models.CharField(max_length=50)
 
 
 class ResponsableVacuna(models.Model):
@@ -38,8 +38,8 @@ class UsuarioPoblacion(models.Model):
     apellidos = models.CharField(max_length=30)
     direccion = models.CharField(max_length=100)
     telefono = models.CharField(max_length=30)
-    ciudad = models.CharField(max_length=100)
-    departamento = models.CharField(max_length=100)
+    ciudad = models.CharField(max_length=50)
+    departamento = models.CharField(max_length=50)
     edad = models.IntegerField()
     fecha_de_nacimiento = models.DateField()
     codigo_de_vacunacion = models.CharField(max_length=15)

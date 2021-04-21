@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from service.views import UsuarioPoblacionLista, UsuarioPoblacionDetalle, PuestoVacunacionLista, PuestoVacunacionDetalle, ResponsableVacunaLista, ResponsableVacunaDetalle,  CompuestoVacunaLista, CompuestoVacunaDetalle, UsuarioLista, UsuarioDetalle
+from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('auth/', views.obtain_auth_token),
     path('usuario/', UsuarioLista.as_view()),
     path('usuario/<int:pk>/', UsuarioDetalle.as_view()),
     path('usuarios_poblacion/', UsuarioPoblacionLista.as_view()),

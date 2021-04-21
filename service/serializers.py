@@ -15,7 +15,8 @@ class UsuarioPoblacionSerializer(serializers.ModelSerializer):
 class PuestoVacunacionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PuestoVacunacion
-        fields = ['nombre', 'direccion', 'nombre_ips', 'telefono_1', 'telefono_2', 'horario_de_atencion']
+        fields = ['nombre', 'direccion', 'nombre_ips', 'telefono_1', 'horario_de_atencion']
+        optional_fields = ['telefono_2', ]
 
 class ResponsableVacunaSerializer(serializers.ModelSerializer):
     class Meta:
